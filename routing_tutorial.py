@@ -22,6 +22,10 @@ def get_profiile(username):
 def get_message(message_id):
     return "message id: %d" % message_id
 
+@app.route("/second/<int:messageid>")
+def get_first(messageid):
+    return "<h1>%d</h1>" % (messageid + 5)
+
 
 if __name__ == "__main__":
     app.run(host="127.0.0.1", port="8080")
